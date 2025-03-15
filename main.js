@@ -25,7 +25,16 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // Add your functions below:
 
-
+// This function should return "true" when an array contains digits of a valid credit card number and false when it is invalid.
+function validateCred(arr) {
+  const array =[];
+  // Setting the iteration counter to iterate every other number, backwards through the array starting with the second to last digit
+  for (let i = arr.length - 2; i >= 0; i -= 2) {
+    array.push(arr[i] * 2);
+  }
+  return array;
+}
+console.log(validateCred(mystery5));
 
 
 
